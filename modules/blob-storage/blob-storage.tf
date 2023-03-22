@@ -7,7 +7,7 @@ variable "location" {
 }
 
 resource "azurerm_storage_account" "terraform-demo" {
-    name = "terraformetldemo"
+    name = "terraformetldemowhp"
     resource_group_name = var.resource_group_name
     location = var.location
     account_tier = "Standard"
@@ -20,7 +20,7 @@ resource "azurerm_storage_account" "terraform-demo" {
 }
 
 resource "azurerm_storage_container" "terraform-demo" {
-  name                  = "terraform-demo"
+  name                  = "terraform-demowhp"
   storage_account_name  = azurerm_storage_account.terraform-demo.name
   container_access_type = "private"
 }

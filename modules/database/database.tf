@@ -17,7 +17,7 @@ variable "password" {
 }
 
 resource "azurerm_sql_server" "terraform-demo-sqlserver" {
-  name                         = "terraformdemosqlserver"
+  name                         = "terraformdemowhpsqls"
   resource_group_name          = var.resource_group_name
   location                     = var.location
   version                      = "12.0"
@@ -26,7 +26,7 @@ resource "azurerm_sql_server" "terraform-demo-sqlserver" {
 }
 
 resource "azurerm_sql_database" "terraform-demo-sql-database" {
-  name                = "terraform-demo-sql-database"
+  name                = "terraform-demowhp-sql-db"
   resource_group_name = var.resource_group_name
   location            = var.location
   server_name         = azurerm_sql_server.terraform-demo-sqlserver.name
